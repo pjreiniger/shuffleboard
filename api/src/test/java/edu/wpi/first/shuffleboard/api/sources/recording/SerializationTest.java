@@ -4,8 +4,7 @@ import edu.wpi.first.shuffleboard.api.data.DataTypes;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junitpioneer.jupiter.TempDirectory;
-import org.junitpioneer.jupiter.TempDirectory.TempDir;
+import org.junit.jupiter.api.io.TempDir;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -65,7 +64,6 @@ public class SerializationTest {
   }
 
   @Test
-  @ExtendWith(TempDirectory.class)
   public void testSimpleEncodeRecode(@TempDir Path dir) throws IOException {
     final Path file = dir.resolve("testSimpleEncodeRecode.sbr");
     final Recording recording = new Recording();
@@ -78,7 +76,6 @@ public class SerializationTest {
   }
 
   @Test
-  @ExtendWith(TempDirectory.class)
   public void testUpdateFile(@TempDir Path dir) throws IOException {
     final Path file = dir.resolve("testUpdateFile.sbr");
     final Recording recording = new Recording();
@@ -99,7 +96,6 @@ public class SerializationTest {
   }
 
   @Test
-  @ExtendWith(TempDirectory.class)
   public void testUpdateFileWithNewDataTypes(@TempDir Path dir) throws IOException {
     final Path file = dir.resolve("testUpdateFileWithNewDataTypes.sbr");
     final Recording recording = new Recording();
@@ -137,7 +133,6 @@ public class SerializationTest {
   }
 
   @Test
-  @ExtendWith(TempDirectory.class)
   public void testEncodeRecodeWithMarkers(@TempDir Path dir) throws IOException {
     final Path file = dir.resolve("testEncodeRecodeWithMarkers.sbr");
     Recording recording = new Recording();
@@ -154,7 +149,6 @@ public class SerializationTest {
   }
 
   @Test
-  @ExtendWith(TempDirectory.class)
   public void testWithMarkersAndData(@TempDir Path dir) throws IOException {
     final Path file = dir.resolve("testWithMarkersAndData.sbr");
     Recording recording = new Recording();
@@ -171,7 +165,6 @@ public class SerializationTest {
   }
 
   @Test
-  @ExtendWith(TempDirectory.class)
   public void testUpdateWithMarkersAndData(@TempDir Path dir) throws IOException {
     final Path file = dir.resolve("testUpdateWithMarkersAndData.sbr");
     final TimestampedData data = new TimestampedData("foo", DataTypes.Boolean, false, 0);

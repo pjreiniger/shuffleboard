@@ -1,0 +1,10 @@
+plugins {
+    id 'java-library'
+}
+
+description = "Base shuffleboard plugin that provides the default data types and widgets."
+
+dependencies {
+    // https://github.com/fair-acc/chart-fx/compare/11.1.5...11.2.0#diff-a19b88d4a996460adef797ceff5bfae3aa718f05d39e4b017d6c8f30aad6aa4fR248
+    api "de.gsi.chart:chartfx-chart:11.2.0"
+}

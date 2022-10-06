@@ -304,8 +304,8 @@ public class GraphWidget extends AbstractWidget implements AnnotatedWidget {
       // This code here makes the graph  square wave and prevents discrete points
       // from appearing continuous.
       double[] yValues = data.getValues(DataSet.DIM_Y);
-      if (data.getDataCount(DataSet.DIM_Y) > 1 && yValues[yValues.length - 1] != nextValue) {
-        data.add(elapsed - 1, yValues[data.getDataCount(DataSet.DIM_Y) - 1]);
+      if (data.getDataCount() > 1 && yValues[yValues.length - 1] != nextValue) {
+        data.add(elapsed - 1, yValues[data.getDataCount() - 1]);
       }
 
       data.add(elapsed, nextValue);
@@ -373,12 +373,12 @@ public class GraphWidget extends AbstractWidget implements AnnotatedWidget {
 
       OptionalDouble dataSetMax = doubleDataSet.lock().readLockGuard(() -> {
 
-        if (doubleDataSet.getDataCount(DataSet.DIM_X) == 0) {
+        if (doubleDataSet.getDataCount() == 0) {
           return OptionalDouble.empty();
         }
 
         double[] xValues = doubleDataSet.getValues(DataSet.DIM_X);
-        return OptionalDouble.of(xValues[doubleDataSet.getDataCount(DataSet.DIM_X) - 1]);
+        return OptionalDouble.of(xValues[doubleDataSet.getDataCount() - 1]);
       });
 
       if (dataSetMax.isPresent()) {
