@@ -171,7 +171,7 @@ allprojects {
         def testFx = { name ->
             create group: 'org.testfx', name: name, version: '4.0.16-alpha'
         }
-        compileOnly create(group: 'com.google.code.findbugs', name: 'annotations', version: '3.0.1')
+        compileOnly create(group: 'com.google.code.findbugs', name: 'annotations', version: '3.0.1u2')
         testImplementation junitJupiter("junit-jupiter-api")
         testImplementation junitJupiter("junit-jupiter-engine")
         testImplementation junitJupiter("junit-jupiter-params")
