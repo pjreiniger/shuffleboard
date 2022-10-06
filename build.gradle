@@ -177,7 +177,7 @@ allprojects {
         testImplementation junitJupiter("junit-jupiter-params")
 
         testImplementation group: "org.junit-pioneer", name: "junit-pioneer", version: "0.3.0"
-        testRuntimeOnly group: "org.junit.platform", name: "junit-platform-launcher", version: "1.0.0"
+        testRuntimeOnly group: "org.junit.platform", name: "junit-platform-launcher", version: "1.9.1"
 
         testImplementation testFx("testfx-core")
         testImplementation testFx("testfx-junit5")
