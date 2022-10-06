@@ -2,12 +2,12 @@ import com.github.spotbugs.snom.SpotBugsTask
 
 plugins {
     id 'base'
-    id 'com.github.johnrengelman.shadow' version '7.1.1' apply false
+    id 'com.github.johnrengelman.shadow' version '7.1.2' apply false
     id "com.jfrog.artifactory" version "4.25.2"
     id 'edu.wpi.first.wpilib.versioning.WPILibVersioningPlugin' version '4.1.0'
     id 'edu.wpi.first.wpilib.repositories.WPILibRepositoriesPlugin' version '2020.2'
     id 'com.diffplug.spotless' version '6.0.5'
-    id 'com.github.spotbugs' version '5.0.4'
+    id 'com.github.spotbugs' version '5.0.12'
     id 'edu.wpi.first.WpilibTools' version '0.9.1'
 }
 
@@ -176,8 +176,8 @@ allprojects {
         testImplementation junitJupiter("junit-jupiter-engine")
         testImplementation junitJupiter("junit-jupiter-params")
 
-        testImplementation group: "org.junit-pioneer", name: "junit-pioneer", version: "0.3.0"
-        testRuntimeOnly group: "org.junit.platform", name: "junit-platform-launcher", version: "1.0.0"
+        testImplementation group: "org.junit-pioneer", name: "junit-pioneer", version: "1.7.1"
+        testRuntimeOnly group: "org.junit.platform", name: "junit-platform-launcher", version: "1.9.1"
 
         testImplementation testFx("testfx-core")
         testImplementation testFx("testfx-junit5")
