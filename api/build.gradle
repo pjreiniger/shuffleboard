@@ -8,7 +8,7 @@ dependencies {
     api group: "com.google.guava", name: "guava", version: "23.0"
     api group: "com.google.code.gson", name: "gson", version: "2.9.1"
     api group: "org.fxmisc.easybind", name: "easybind", version: "1.0.3"
-    api group: "org.controlsfx", name: "controlsfx", version: "11.1.1"
+    api group: "org.controlsfx", name: "controlsfx", version: "11.1.2"
     api group: "de.codecentric.centerdevice", name: "javafxsvg", version: "1.3.0"
     api group: "eu.hansolo", name: "Medusa", version: "11.7" // Note the capital 'M' -- lowercase is a much older version!
     api group: "com.jfoenix", name: "jfoenix", version: "9.0.10"
